@@ -8,4 +8,4 @@ fi
 if [ ! -z $2 ]; then
     tag=$2
 fi
-docker run ${STANDARD_MOUNTING_ARGUMENTS} ${STANDARD_PORT_FORWARDS} -it ${container}:${tag}
+docker run ${STANDARD_MOUNTING_ARGUMENTS} -it ${container}:${tag}
