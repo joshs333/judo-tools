@@ -1,0 +1,13 @@
+#!/bin/bash
+eval "$(cat $(dirname "${BASH_SOURCE[0]}")/header.sh)"
+container=vnc_dev
+tag=latest
+if [ ! -z $1 ]; then
+    container=$1
+fi
+if [ ! -z $2 ]; then
+    tag=$2
+fi
+
+docker kill ${container}_${tag}
+docker rm ${container}_${tag}

@@ -1,0 +1,6 @@
+#!/bin/bash
+eval "$(cat $(dirname "${BASH_SOURCE[0]}")/header.sh)"
+
+cd $__dir
+cd ../
+./build $@

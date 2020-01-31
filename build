@@ -1,0 +1,11 @@
+#!/bin/bash
+machine=base_dev
+tag=latest
+if [ ! -z $1 ]; then
+    machine=$1
+fi
+if [ ! -z $2 ]; then
+    tag=$2
+fi
+
+docker build -f docker_files/${machine}.Dockerfile -t ${machine}:${tag} ./build_ctx

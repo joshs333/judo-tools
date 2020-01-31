@@ -1,0 +1,6 @@
+[submodule "build_ctx/libs/fmt"]
+	path = build_ctx/libs/fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "build_ctx/libs/spdlog"]
+	path = build_ctx/libs/spdlog
+	url = https://github.com/gabime/spdlog.git
