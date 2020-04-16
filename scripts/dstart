@@ -9,5 +9,5 @@ if [ ! -z $2 ]; then
     tag=$2
 fi
 
-docker run ${STANDARD_MOUNTING_ARGUMENTS} ${STANDARD_PORT_FORWARDS} --restart=unless-stopped -d --name=${container}_${tag} ${container}:${tag}
+docker run ${STANDARD_MOUNTING_ARGUMENTS} ${STANDARD_PORT_FORWARDS} --network=host --restart=unless-stopped -d --name=${container}_${tag} ${container}:${tag}
 
